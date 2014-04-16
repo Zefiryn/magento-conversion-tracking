@@ -1,0 +1,18 @@
+<?php 
+/**
+ * @var Zefir_ConversionTracking_Block_Criteo_Product $this
+ */
+?>
+<script type="text/javascript">
+//<![CDATA[
+  var criteo_q = criteo_q || [];
+  criteo_q.push(
+    { event: "setAccount", account: <?php echo $this->getAccountId(); ?>},
+<?php if ($this->getCustomerId()): ?>
+    { event: "setCustomerId", id: "<?php echo $this->getCustomerId();?>"},
+<?php endif; ?>
+    { event: "setSiteType", type: "d"},
+    { event: "viewItem", product: "<?php echo $this->getProductName(); ?>" }
+  );
+//]]>
+</script>

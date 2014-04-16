@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Zefir_ConversionTracking>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends></depends>
+        </Zefir_ConversionTracking>
+    </modules>
+</config>

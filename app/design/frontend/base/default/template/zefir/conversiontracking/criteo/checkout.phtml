@@ -1,0 +1,27 @@
+<?php 
+/**
+ * @var Zefir_ConversionTracking_Block_Criteo_Checkout $this
+ */
+?>
+<script type="text/javascript">
+//<![CDATA[
+  var criteo_q = criteo_q || [];
+  <?php foreach($this->getOrders() as $order):?>
+  <?php /* @var $order Mage_Sales_Model_Order */?>
+  criteo_q.push(
+    { event: "setAccount", account: <?php echo $this->getAccountId(); ?>},
+    <?php if ($this->getCustomerId()): ?>
+    { event: "setCustomerId", id: "<?php echo $this->getCustomerId();?>"},
+    <?php endif; ?>
+    { event: "setSiteType", type: "d"},
+    { event: "trackTransaction", id: "<?php echo $order->getIncrementId();?>", new_customer: "<?php echo $this->getNewCustomer($order);?>" ,
+      deduplication: "1", product: [
+        <?php foreach ($order->getItemsCollection() as $item):?>
+        <?php /* @var $item Mage_Sales_Model_Order_Item */?>
+        {id: "<?php echo $item->getProduct()->getSku();?>", price: "<?php echo $this->helper('core')->currency($item->getPrice(), false, false);?>", quantity: "<?php echo $item->getQtyOrdered() * 1;?>"},
+        <?php endforeach;?>
+      ]}
+  );
+  <?php endforeach;?>
+//]]>
+</script>
