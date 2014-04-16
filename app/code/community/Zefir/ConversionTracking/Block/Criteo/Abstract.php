@@ -4,7 +4,7 @@
  * @package Zefir_ConversionTracking_Criteo
  * @license http://www.mozilla.org/MPL/2.0/ Mozilla Public License 2.0 (MPL)
  */
-class Zefir_ConversionTracking_Block_Criteo_Abstract extends Mage_Core_Block_Template {
+class Zefir_ConversionTracking_Block_Criteo_Abstract extends Zefir_ConversionTracking_Block_Abstract {
 
   /**
    * Get current customer ID
@@ -31,19 +31,6 @@ class Zefir_ConversionTracking_Block_Criteo_Abstract extends Mage_Core_Block_Tem
    */
   protected function _helper() {
     return $this->helper('conversiontracking/criteo');
-  }
-
-  /**
-   * Check if module is enabled before rendering the block
-   * 
-   * @return string
-   */
-  protected function _toHtml() {
-    if (!$this->_helper()->isEnabled()) {
-      return '';
-    }
-    
-    return parent::_toHtml();
   }
 
 }

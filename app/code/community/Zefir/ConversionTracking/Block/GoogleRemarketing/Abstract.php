@@ -5,7 +5,7 @@
  * @license http://www.mozilla.org/MPL/2.0/ Mozilla Public License 2.0 (MPL)
  */
 
-class Zefir_ConversionTracking_Block_GoogleRemarketing_Abstract extends Mage_Core_Block_Template {
+class Zefir_ConversionTracking_Block_GoogleRemarketing_Abstract extends Zefir_ConversionTracking_Block_Abstract {
   
   protected $_customer = null;
   
@@ -16,7 +16,7 @@ class Zefir_ConversionTracking_Block_GoogleRemarketing_Abstract extends Mage_Cor
   public function getConversionLabel() {
     return $this->_helper()->getConversionLabel();
   }
-  
+    
   public function getRemarketingOnlyFlag() {
     return $this->_helper()->getRemarketingOnlyFlag();
   }
@@ -109,19 +109,5 @@ class Zefir_ConversionTracking_Block_GoogleRemarketing_Abstract extends Mage_Cor
    */
   protected function _helper() {
     return $this->helper('conversiontracking/googleRemarekting');
-  }
-  
-  /**
-   * Check if module is enabled before rendering the block
-   * 
-   * @return string
-   */
-  protected function _toHtml() {
-    if (!$this->_helper()->isEnabled()) {
-      return '';
-    }
-    
-    return parent::_toHtml();
-  }
-
+  }  
 }
