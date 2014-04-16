@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @author Zefiryn
  * @package Zefir_ConversionTracking_Criteo

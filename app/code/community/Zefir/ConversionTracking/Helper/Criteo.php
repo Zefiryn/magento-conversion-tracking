@@ -1,7 +1,7 @@
 <?php
 /**
 * @author Zefiryn
-* @package Zefir_ConversionTracking
+* @package Zefir_ConversionTracking_Criteo
 * @license http://www.mozilla.org/MPL/2.0/ Mozilla Public License 2.0 (MPL)
 */
 
