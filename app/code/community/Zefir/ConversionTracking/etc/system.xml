@@ -11,11 +11,41 @@
       <show_in_store>1</show_in_store>
       <groups>
         
+        <!-- BOUNCE X -->
+        <bouncex translate="label" module="conversiontracking">
+          <label>BounceX</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>10</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>0</show_in_store>
+          <expanded>1</expanded>
+          <fields>
+            <enabled translate="label">
+              <label>Enable BounceX</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_enabledisable</source_model>              
+              <sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </enabled>
+            <script_file translate="label">
+              <label>Javscript File Soure</label>
+              <frontend_type>text</frontend_type>              
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </script_file>
+          </fields>
+        </bouncex>
+        
         <!-- CRITEO -->
         <criteo translate="label" module="conversiontracking">
           <label>Criteo</label>
           <frontend_type>text</frontend_type>
-          <sort_order>10</sort_order>
+          <sort_order>20</sort_order>
           <show_in_default>1</show_in_default>
           <show_in_website>0</show_in_website>
           <show_in_store>0</show_in_store>
@@ -54,7 +84,7 @@
         <google_remarketing translate="label" module="conversiontracking">
           <label>Google Remarketing</label>
           <frontend_type>text</frontend_type>
-          <sort_order>20</sort_order>
+          <sort_order>100</sort_order>
           <show_in_default>1</show_in_default>
           <show_in_website>1</show_in_website>
           <show_in_store>0</show_in_store>

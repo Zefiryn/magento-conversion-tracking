@@ -11,6 +11,13 @@
 class Zefir_ConversionTracking_Block_Abstract extends Mage_Core_Block_Template {
   
   /**
+   * Orders collection
+   * 
+   * @var Mage_Sales_Model_Resource_Order_Collection
+   */
+  protected $_orders;
+  
+  /**
    * Get GoogleRemarketing helper object
    * 
    * @return \Zefir_ConversionTracking_Helper_GoogleRemarekting
@@ -30,5 +37,18 @@ class Zefir_ConversionTracking_Block_Abstract extends Mage_Core_Block_Template {
     }
     
     return parent::_toHtml();
+  }
+    
+  /**
+   * Get orders
+   * 
+   * @return Mage_Sales_Model_Resource_Order_Collection
+   */
+  public function getOrders() {
+    if (Mage::registry('conversiontracking_order_ids') && $this->_orders == null) {
+      $orders = Mage::registry('conversiontracking_order_ids');
+      $this->_orders = Mage::getModel('sales/order')->getCollection()->addAttributeToFilter('entity_id', array('in' => $orders));
+    }
+    return $this->_orders;
   }
 }

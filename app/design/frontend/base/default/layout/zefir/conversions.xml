@@ -59,18 +59,26 @@
   </checkout_cart_index>
   
   <checkout_onepage_success>
+    <reference name="head">
+      <block type="bouncex/block" after="-" name="bouncex.script" template="bouncex/script.phtml" />
+    </reference>    
     <reference name="before_body_end">
       <block type="conversiontracking/criteo_checkout" name="criteo.checkout" template="zefir/conversiontracking/criteo/checkout.phtml" />
       <remove name="remarketing" />
       <block type="conversiontracking/googleRemarketing_checkout" name="remarketing.checkout" template="zefir/conversiontracking/remarketing/script.phtml" />
+      <block type="bouncex/block" after="-" name="bouncex.checkout" template="bouncex/checkout.phtml" />
     </reference>
   </checkout_onepage_success>
   
   <checkout_multishipping_success>
+    <reference name="head">
+      <block type="bouncex/block" after="-" name="bouncex.script" template="bouncex/script.phtml" />
+    </reference>    
     <reference name="before_body_end">
       <block type="conversiontracking/criteo_checkout" name="criteo.checkout" template="zefir/conversiontracking/criteo/checkout.phtml" />
       <remove name="remarketing" />
       <block type="conversiontracking/googleRemarketing_checkout" name="remarketing.checkout" template="zefir/conversiontracking/remarketing/script.phtml" />
+      <block type="bouncex/block" after="-" name="bouncex.checkout" template="bouncex/checkout.phtml" />
     </reference>
   </checkout_multishipping_success>
 </layout>

@@ -1,0 +1,18 @@
+<?php 
+/**
+ * @var Zefir_ConversionTracking_Block_BounceX_Block $this
+ */
+?>
+<script type="text/javascript">
+//<![CDATA[
+window.bxAsyncInit = function(){
+  <?php foreach($this->getOrders() as $order):?>
+  bouncex.report_conversion({
+    order_id: '<?php echo $order->getIncrementId();?>',
+    amount: '<?php echo Mage::helper('core')->currency($order->getGrandTotal(), false, false);?>',
+    email: '<?php echo $order->getCustomerEmail();?>'
+  });
+  <?php endforeach; ?>
+};
+//]]>
+</script>
