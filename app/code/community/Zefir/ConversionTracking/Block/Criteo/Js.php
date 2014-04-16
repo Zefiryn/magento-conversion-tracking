@@ -19,7 +19,7 @@ class Zefir_ConversionTracking_Block_Criteo_Js extends Zefir_ConversionTracking_
       return '//' . $url;
     }
     else {
-      //url given with protocol of universal // to use the same protocol as current get
+      //url given with protocol or universal // to use the same protocol as current get
       //trim http or htpps from start
       return preg_replace('/^http(s)?:/', null, $url);
     }

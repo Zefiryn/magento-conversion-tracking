@@ -7,23 +7,6 @@
 class Zefir_ConversionTracking_Block_Criteo_Checkout extends Zefir_ConversionTracking_Block_Criteo_Abstract {
   
   /**
-   * Order Ids
-   * @var array 
-   */
-  protected $_orders;
-  
-  /**
-   * Get orders
-   */
-  public function getOrders() {
-    if ($this->_orders == null) {
-      $orders = Mage::registry('conversiontracking_order_ids');
-      $this->_orders = Mage::getModel('sales/order')->getCollection()->addAttributeToFilter('entity_id', array('in' => $orders));
-    }
-    return $this->_orders;
-  }
-  
-  /**
    * Check if this if first order based on customer billing address email
    * 
    * @param Mage_Sales_Model_Order $order

@@ -40,12 +40,17 @@ class Zefir_ConversionTracking_Helper_Criteo extends Mage_Core_Helper_Abstract {
   /**
    * Check if criteo submodule is enabled
    * 
-   * @return type
+   * @return boolean
    */
   public function isEnabled() {
     return Mage::getStoreConfig(self::XML_CRITEO_ENABLED);
   }
   
+  /**
+   * Get Criteo javascrip url
+   * 
+   * @return string
+   */
   public function getJsUrl() {
     return Mage::getStoreConfig(self::XML_CRITEO_URL);
   }
