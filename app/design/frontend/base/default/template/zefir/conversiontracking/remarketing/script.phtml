@@ -1,0 +1,31 @@
+<!-- Google Code for Remarketing Tag -->
+<!--Remarketing tags may not be associated with personally identifiable informationor placed on pages related to sensitive categories. See more information andinstructions on how to setup the tag on: http://google.com/ads/remarketingsetup-->
+<script type="text/javascript">  
+ //<![CDATA[
+  var google_tag_params = {        
+    <?php if ($this->getEcommPValue()):?>ecomm_pvalue: <?php echo json_encode($this->getEcommPValue())?>,<?php endif;?>      
+    <?php if ($this->getEcommQuantity()):?>ecomm_quantity: <?php echo json_encode($this->getEcommQuantity())?>,<?php endif;?>
+    <?php if ($this->getEcommCategory()):?>ecomm_category: '<?php echo $this->getEcommCategory();?>',<?php endif;?>  
+    <?php if ($this->getGender()):?>g: '<?php echo $this->getGender();?>',<?php endif;?>
+    <?php if ($this->getAge()):?>a: '<?php echo $this->getAge();?>',<?php endif;?>
+    ecomm_prodid: <?php if ($this->getEcommProdId()):?><?php echo json_encode($this->getEcommProdId())?><?php else:?>''<?php endif;?>,
+    ecomm_pagetype: '<?php echo $this->getEcommPageType();?>',
+    ecomm_totalValue: <?php echo $this->getEcommTotalValue() != null ? $this->getEcommTotalValue() : "''";?>,
+    hasaccount: '<?php echo $this->getHasAccount();?>'
+  };  
+//]]> 
+</script>
+<script type="text/javascript">
+/*<![CDATA[*/
+var google_conversion_id = <?php echo $this->getConversionId();?>;
+var google_conversion_label = '<?php echo $this->getConversionLabel();?>';
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = <?php echo $this->getRemarketingOnlyFlag();?>;
+/*]]>*/
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<noscript>
+  <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/<?php echo $this->getConversionId();?>/?value=0&amp;label=<?php echo $this->getConversionLabel();?>&amp;guid=ON&amp;script=0"/>
+  </div>
+</noscript>
