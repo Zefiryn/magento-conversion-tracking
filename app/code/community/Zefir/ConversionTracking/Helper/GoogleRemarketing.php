@@ -28,6 +28,28 @@ class Zefir_ConversionTracking_Helper_GoogleRemarketing extends Mage_Core_Helper
   const XPATH_CONVERSION_LABEL = 'conversions/google_remarketing/google_conversion_label';
   
   /**
+   * Path to GoogleRemarketing conversion language setting
+   * 
+   * @var string
+   */
+  const XPATH_CONVERSION_LANGUAGE = 'conversions/google_remarketing/google_conversion_language';  
+  
+  /**
+   * Path to GoogleRemarketing conversion format setting
+   * 
+   * @var string
+   */
+  const XPATH_CONVERSION_FORMAT = 'conversions/google_remarketing/google_conversion_format';  
+  
+  /**
+   * Path to GoogleRemarketing conversion color setting
+   * 
+   * @var string
+   */
+  const XPATH_CONVERSION_COLOR = 'conversions/google_remarketing/google_conversion_color';  
+  
+  
+  /**
    * Path to GoogleRemarketing remarketing only flag
    * 
    * @var string
@@ -44,6 +66,18 @@ class Zefir_ConversionTracking_Helper_GoogleRemarketing extends Mage_Core_Helper
   
   public function getConversionLabel() {
     return Mage::getStoreConfig(self::XPATH_CONVERSION_LABEL);
+  }
+  
+  public function getConversionLanguage() {
+    return Mage::getStoreConfig(self::XPATH_CONVERSION_LANGUAGE);
+  }
+  
+  public function getConversionFormat() {
+    return Mage::getStoreConfig(self::XPATH_CONVERSION_FORMAT);
+  }
+  
+  public function getConversionColor() {
+    return Mage::getStoreConfig(self::XPATH_CONVERSION_COLOR);
   }
   
   public function getRemarketingOnlyFlag() {

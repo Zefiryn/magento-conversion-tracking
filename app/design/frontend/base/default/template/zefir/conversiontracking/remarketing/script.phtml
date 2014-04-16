@@ -18,7 +18,10 @@
 <script type="text/javascript">
 /*<![CDATA[*/
 var google_conversion_id = <?php echo $this->getConversionId();?>;
-var google_conversion_label = '<?php echo $this->getConversionLabel();?>';
+var google_conversion_label = "<?php echo $this->getConversionLabel();?>";
+var google_conversion_language = "<?php echo $this->getConversionLanguage();?>";
+var google_conversion_format = "<?php echo $this->getConversionFormat();?>";
+var google_conversion_color = "<?php echo $this->getConversionColor();?>";
 var google_custom_params = window.google_tag_params;
 var google_remarketing_only = <?php echo $this->getRemarketingOnlyFlag();?>;
 /*]]>*/

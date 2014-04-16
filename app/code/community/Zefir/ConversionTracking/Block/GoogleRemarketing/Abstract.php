@@ -16,6 +16,18 @@ class Zefir_ConversionTracking_Block_GoogleRemarketing_Abstract extends Zefir_Co
   public function getConversionLabel() {
     return $this->_helper()->getConversionLabel();
   }
+  
+  public function getConversionLanguage() {
+    return $this->_helper()->getConversionLanguage();
+  }
+  
+  public function getConversionFormat() {
+    return $this->_helper()->getConversionFormat();
+  }
+  
+  public function getConversionColor() {
+    return $this->_helper()->getConversionColor();
+  }
     
   public function getRemarketingOnlyFlag() {
     return $this->_helper()->getRemarketingOnlyFlag();
