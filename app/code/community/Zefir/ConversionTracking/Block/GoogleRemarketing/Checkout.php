@@ -35,7 +35,7 @@ class Zefir_ConversionTracking_Block_GoogleRemarketing_Checkout extends Zefir_Co
     return $products;
   }
   public function getEcommPValue() {
-    $prices = array();
+    $prices = array();    
     foreach($this->getOrders() as $order) {
       foreach ($order->getItemsCollection() as $item) {
         $prices[] = $this->helper('core')->currency($item->getPrice(), false, false);

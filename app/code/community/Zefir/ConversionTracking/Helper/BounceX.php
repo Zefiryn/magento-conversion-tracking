@@ -12,14 +12,14 @@ class Zefir_ConversionTracking_Helper_BounceX extends Mage_Core_Helper_Abstract 
    * 
    * @var string
    */
-  const XPATH_ENABLE = 'bouncex/options/enabled';
+  const XPATH_ENABLE = 'conversions/bouncex/enabled';
   
   /**
    * Path to bouncex js script file configuration
    * 
    * @var string
    */
-  const XPATH_SCRIPT_SRC = 'bouncex/options/script_file';
+  const XPATH_SCRIPT_SRC = 'conversions/bouncex/script_file';
   
   
   /**

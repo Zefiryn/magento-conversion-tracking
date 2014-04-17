@@ -5,7 +5,7 @@
 * @license http://www.mozilla.org/MPL/2.0/ Mozilla Public License 2.0 (MPL)
 */
 
-class Zefir_ConversionTracking_Criteo_Model_Observer {
+class Zefir_ConversionTracking_Model_Observer {
   
   /**
    * Save current customer order on a success page

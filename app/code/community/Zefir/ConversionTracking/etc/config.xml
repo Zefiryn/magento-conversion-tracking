@@ -21,31 +21,42 @@
         <class>Zefir_ConversionTracking_Model</class>
       </conversiontracking>
     </models>
+    <events>
+      <checkout_onepage_controller_success_action>
+        <observers>
+          <conversion_save_order>
+            <type>singleton</type>
+            <class>conversiontracking/observer</class>
+            <method>saveLastOrderId</method>
+          </conversion_save_order>
+        </observers>
+      </checkout_onepage_controller_success_action>
+      <checkout_multishipping_controller_success_action>
+        <observers>
+          <conversion_save_order>
+            <type>singleton</type>
+            <class>conversiontracking/observer</class>
+            <method>saveLastOrderId</method>
+          </conversion_save_order>
+        </observers>
+      </checkout_multishipping_controller_success_action>  
+    </events>
   </global>
-  <frontend>
-    <checkout_onepage_controller_success_action>
-      <observers>
-        <conversion_save_order>
-          <type>singleton</type>
-          <class>conversiontracking/observer</class>
-          <method>saveLastOrderId</method>
-        </conversion_save_order>
-      </observers>
-    </checkout_onepage_controller_success_action>
-    <checkout_multishipping_controller_success_action>
-      <observers>
-        <conversion_save_order>
-          <type>singleton</type>
-          <class>conversiontracking/observer</class>
-          <method>saveLastOrderId</method>
-        </conversion_save_order>
-      </observers>
-    </checkout_multishipping_controller_success_action>
+  <frontend>    
     <layout>
       <updates>
-        <zefir_conversiontracking>
-          <file>zefir/conversions.xml</file>
-        </zefir_conversiontracking>
+        <conversiontracking_googleremarketing>
+          <file>zefir/trackers/googleremarketing.xml</file>
+        </conversiontracking_googleremarketing>
+        <conversiontracking_bouncex>
+          <file>zefir/trackers/bouncex.xml</file>
+        </conversiontracking_bouncex>
+        <conversiontracking_criteo>
+          <file>zefir/trackers/criteo.xml</file>
+        </conversiontracking_criteo>
+        <conversiontracking_pricegrabber>
+          <file>zefir/trackers/pricegrabber.xml</file>
+        </conversiontracking_pricegrabber>
       </updates>
     </layout>
   </frontend>

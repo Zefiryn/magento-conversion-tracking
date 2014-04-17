@@ -120,6 +120,6 @@ class Zefir_ConversionTracking_Block_GoogleRemarketing_Abstract extends Zefir_Co
    * @return \Zefir_ConversionTracking_Helper_GoogleRemarekting
    */
   protected function _helper() {
-    return $this->helper('conversiontracking/googleRemarekting');
+    return $this->helper('conversiontracking/googleRemarketing');
   }  
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+ 
+  <checkout_onepage_success>
+    <reference name="head">
+      <block type="conversiontracking/bounceX_block" after="-" name="bouncex.script" template="zefir/conversiontracking/bouncex/script.phtml" />
+    </reference>    
+    <reference name="before_body_end">
+      <block type="conversiontracking/bounceX_block" after="-" name="bouncex.checkout" template="zefir/conversiontracking/bouncex/checkout.phtml" />
+    </reference>
+  </checkout_onepage_success>
+  
+  <checkout_multishipping_success>
+    <reference name="head">
+      <block type="conversiontracking/bounceX_block" after="-" name="bouncex.script" template="zefir/conversiontracking/bouncex/script.phtml" />
+    </reference>    
+    <reference name="before_body_end">
+      <block type="conversiontracking/bounceX_block" after="-" name="bouncex.checkout" template="zefir/conversiontracking/bouncex/checkout.phtml" />
+    </reference>
+  </checkout_multishipping_success>
+</layout>

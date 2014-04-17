@@ -2,9 +2,6 @@
 <layout version="0.1.0">
   
   <default>
-    <reference name="head">
-      <block type="conversiontracking/criteo_js" name="criteo.js" template="zefir/conversiontracking/criteo/js.phtml" />      
-    </reference>
     <reference name="before_body_end">
       <block type="conversiontracking/googleRemarketing_abstract" name="remarketing" template="zefir/conversiontracking/remarketing/script.phtml" />
     </reference>
@@ -12,7 +9,6 @@
   
   <cms_index_index>
     <reference name="before_body_end">
-      <block type="conversiontracking/criteo_homepage" name="criteo.homepage" template="zefir/conversiontracking/criteo/home.phtml" />
       <remove name="remarketing" />
       <block type="conversiontracking/googleRemarketing_homepage" name="remarketing.homepage" template="zefir/conversiontracking/remarketing/script.phtml" />
     </reference>
@@ -20,7 +16,6 @@
   
   <catalog_product_view>
     <reference name="before_body_end">
-      <block type="conversiontracking/criteo_product" name="criteo.product" template="zefir/conversiontracking/criteo/product.phtml" />
       <remove name="remarketing" />
       <block type="conversiontracking/googleRemarketing_product" name="remarketing.product" template="zefir/conversiontracking/remarketing/script.phtml" />
     </reference>
@@ -28,7 +23,6 @@
   
   <catalog_category_default>
     <reference name="before_body_end">
-      <block type="conversiontracking/criteo_category" name="criteo.category" template="zefir/conversiontracking/criteo/category.phtml" />
       <remove name="remarketing" />
       <block type="conversiontracking/googleRemarketing_category" name="remarketing.category" template="zefir/conversiontracking/remarketing/script.phtml" />
     </reference>
@@ -36,7 +30,6 @@
   
   <catalog_category_layered>
     <reference name="before_body_end">
-      <block type="conversiontracking/criteo_category" name="criteo.category" template="zefir/conversiontracking/criteo/category.phtml" />
       <remove name="remarketing" />
       <block type="conversiontracking/googleRemarketing_category" name="remarketing.category" template="zefir/conversiontracking/remarketing/script.phtml" />
     </reference>
@@ -44,7 +37,6 @@
   
   <catalogsearch_result_index>
     <reference name="before_body_end">
-      <block type="conversiontracking/criteo_search" name="criteo.search" template="zefir/conversiontracking/criteo/search.phtml" />
       <remove name="remarketing" />
       <block type="conversiontracking/googleRemarketing_search" name="remarketing.search" template="zefir/conversiontracking/remarketing/script.phtml" />
     </reference>
@@ -52,33 +44,22 @@
   
   <checkout_cart_index>
     <reference name="before_body_end">
-      <block type="conversiontracking/criteo_cart" name="criteo.cart" template="zefir/conversiontracking/criteo/cart.phtml" />
       <remove name="remarketing" />
       <block type="conversiontracking/googleRemarketing_cart" name="remarketing.cart" template="zefir/conversiontracking/remarketing/script.phtml" />
     </reference>
   </checkout_cart_index>
   
   <checkout_onepage_success>
-    <reference name="head">
-      <block type="bouncex/block" after="-" name="bouncex.script" template="bouncex/script.phtml" />
-    </reference>    
     <reference name="before_body_end">
-      <block type="conversiontracking/criteo_checkout" name="criteo.checkout" template="zefir/conversiontracking/criteo/checkout.phtml" />
       <remove name="remarketing" />
       <block type="conversiontracking/googleRemarketing_checkout" name="remarketing.checkout" template="zefir/conversiontracking/remarketing/script.phtml" />
-      <block type="bouncex/block" after="-" name="bouncex.checkout" template="bouncex/checkout.phtml" />
     </reference>
   </checkout_onepage_success>
   
   <checkout_multishipping_success>
-    <reference name="head">
-      <block type="bouncex/block" after="-" name="bouncex.script" template="bouncex/script.phtml" />
-    </reference>    
     <reference name="before_body_end">
-      <block type="conversiontracking/criteo_checkout" name="criteo.checkout" template="zefir/conversiontracking/criteo/checkout.phtml" />
       <remove name="remarketing" />
       <block type="conversiontracking/googleRemarketing_checkout" name="remarketing.checkout" template="zefir/conversiontracking/remarketing/script.phtml" />
-      <block type="bouncex/block" after="-" name="bouncex.checkout" template="bouncex/checkout.phtml" />
     </reference>
   </checkout_multishipping_success>
 </layout>

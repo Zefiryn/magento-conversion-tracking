@@ -1,0 +1,8 @@
+<?php 
+/**
+ * @var Zefir_ConversionTracking_Block_PriceGrabber_Block $this
+ */
+?>
+<?php foreach($this->getOrders() as $order):?>
+<img src="https://www.pricegrabber.com/conversion.php?retid=<?php echo $this->getRetId();?>&<?php echo $this->getItemsData($order);?>" />
+<?php endforeach;?>

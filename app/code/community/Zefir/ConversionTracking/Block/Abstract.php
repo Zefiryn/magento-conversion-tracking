@@ -15,7 +15,7 @@ class Zefir_ConversionTracking_Block_Abstract extends Mage_Core_Block_Template {
    * 
    * @var Mage_Sales_Model_Resource_Order_Collection
    */
-  protected $_orders;
+  protected static $_orders;
   
   /**
    * Get GoogleRemarketing helper object
@@ -45,10 +45,10 @@ class Zefir_ConversionTracking_Block_Abstract extends Mage_Core_Block_Template {
    * @return Mage_Sales_Model_Resource_Order_Collection
    */
   public function getOrders() {
-    if (Mage::registry('conversiontracking_order_ids') && $this->_orders == null) {
+    if (Mage::registry('conversiontracking_order_ids') && self::$_orders == null) {
       $orders = Mage::registry('conversiontracking_order_ids');
-      $this->_orders = Mage::getModel('sales/order')->getCollection()->addAttributeToFilter('entity_id', array('in' => $orders));
+      self::$_orders = Mage::getModel('sales/order')->getCollection()->addAttributeToFilter('entity_id', array('in' => $orders));
     }
-    return $this->_orders;
+    return self::$_orders;
   }
 }

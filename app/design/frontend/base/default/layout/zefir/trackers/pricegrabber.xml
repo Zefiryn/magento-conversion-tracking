@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+  <checkout_onepage_success>
+    <reference name="before_body_end">
+      <block type="conversiontracking/priceGrabber_block" after="-" name="pricegrabber.checkout" template="zefir/conversiontracking/pricegrabber/checkout.phtml" />
+    </reference>
+  </checkout_onepage_success>
+  
+  <checkout_multishipping_success>
+    <reference name="before_body_end">
+      <block type="conversiontracking/priceGrabber_block" after="-" name="pricegrabber.checkout" template="zefir/conversiontracking/pricegrabber/checkout.phtml" />
+    </reference>
+  </checkout_multishipping_success>
+</layout>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  
+  <default>
+    <reference name="head">
+      <block type="conversiontracking/criteo_js" name="criteo.js" template="zefir/conversiontracking/criteo/js.phtml" />      
+    </reference>
+  </default>
+  
+  <cms_index_index>
+    <reference name="before_body_end">
+      <block type="conversiontracking/criteo_homepage" name="criteo.homepage" template="zefir/conversiontracking/criteo/home.phtml" />
+    </reference>
+  </cms_index_index>
+  
+  <catalog_product_view>
+    <reference name="before_body_end">
+      <block type="conversiontracking/criteo_product" name="criteo.product" template="zefir/conversiontracking/criteo/product.phtml" />
+    </reference>
+  </catalog_product_view>
+  
+  <catalog_category_default>
+    <reference name="before_body_end">
+      <block type="conversiontracking/criteo_category" name="criteo.category" template="zefir/conversiontracking/criteo/category.phtml" />
+    </reference>
+  </catalog_category_default>
+  
+  <catalog_category_layered>
+    <reference name="before_body_end">
+      <block type="conversiontracking/criteo_category" name="criteo.category" template="zefir/conversiontracking/criteo/category.phtml" />
+    </reference>
+  </catalog_category_layered>
+  
+  <catalogsearch_result_index>
+    <reference name="before_body_end">
+      <block type="conversiontracking/criteo_search" name="criteo.search" template="zefir/conversiontracking/criteo/search.phtml" />
+    </reference>
+  </catalogsearch_result_index>
+  
+  <checkout_cart_index>
+    <reference name="before_body_end">
+      <block type="conversiontracking/criteo_cart" name="criteo.cart" template="zefir/conversiontracking/criteo/cart.phtml" />
+    </reference>
+  </checkout_cart_index>
+  
+  <checkout_onepage_success>
+    <reference name="before_body_end">
+      <block type="conversiontracking/criteo_checkout" name="criteo.checkout" template="zefir/conversiontracking/criteo/checkout.phtml" />
+    </reference>
+  </checkout_onepage_success>
+  
+  <checkout_multishipping_success>
+    <reference name="before_body_end">
+      <block type="conversiontracking/criteo_checkout" name="criteo.checkout" template="zefir/conversiontracking/criteo/checkout.phtml" />
+    </reference>
+  </checkout_multishipping_success>
+</layout>
