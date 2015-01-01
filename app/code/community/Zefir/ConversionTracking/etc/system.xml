@@ -30,7 +30,7 @@
                             <show_in_store>1</show_in_store>
                         </enabled>
                         <script_file translate="label" module="conversiontracking">
-                            <label>Javscript File Soure</label>
+                            <label>Javascript File Source</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
@@ -151,7 +151,7 @@
 
                 <!-- NEXT TAG -->
                 <nextag translate="label" module="conversiontracking">
-                    <label>Nextag Tracker Options</label>
+                    <label>Nextag</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>160</sort_order>
                     <show_in_default>1</show_in_default>
@@ -159,7 +159,7 @@
                     <show_in_store>1</show_in_store>
                     <fields>
                         <enabled translate="label" module="conversiontracking">
-                            <label>Enable Tracking</label>
+                            <label>Enable Nextag Module</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_enabledisable</source_model>
                             <sort_order>10</sort_order>
@@ -209,7 +209,7 @@
 
                 <!-- SHOPPING.COM -->
                 <shoppingcom translate="label" module="conversiontracking">
-                    <label>Shopping.com Tracker Options</label>
+                    <label>Shopping.com</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>240</sort_order>
                     <show_in_default>1</show_in_default>
@@ -217,7 +217,7 @@
                     <show_in_store>1</show_in_store>
                     <fields>
                         <enabled translate="label" module="conversiontracking">
-                            <label>Enable Tracking</label>
+                            <label>Enable Shopping.com Module</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_enabledisable</source_model>
                             <sort_order>10</sort_order>
@@ -237,7 +237,7 @@
 
                 <!-- SHOPZILLA -->
                 <shopzilla translate="label" module="conversiontracking">
-                    <label>Shopzilla Tracker Options</label>
+                    <label>Shopzilla</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>280</sort_order>
                     <show_in_default>1</show_in_default>
@@ -245,7 +245,7 @@
                     <show_in_store>1</show_in_store>
                     <fields>
                         <enabled translate="label" module="conversiontracking">
-                            <label>Enable Tracking</label>
+                            <label>Enable Shopzilla Module</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_enabledisable</source_model>
                             <sort_order>10</sort_order>
@@ -266,7 +266,7 @@
 
                 <!-- SPARK -->
                 <spark translate="label" module="conversiontracking">
-                    <label>Spart Tracker Options</label>
+                    <label>Spark</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>320</sort_order>
                     <show_in_default>1</show_in_default>
@@ -274,7 +274,7 @@
                     <show_in_store>1</show_in_store>
                     <fields>
                         <enabled translate="label" module="conversiontracking">
-                            <label>Enable Tracking</label>
+                            <label>Enable Spark Module</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_enabledisable</source_model>
                             <sort_order>10</sort_order>
