@@ -1,212 +1,308 @@
 <?xml version="1.0"?>
 <config>
-  <sections>
-    <conversions translate="label" module="conversiontracking">
-      <tab>sales</tab>
-      <label>Conversion Tracking</label>
-      <frontend_type>text</frontend_type>
-      <sort_order>500</sort_order>
-      <show_in_default>1</show_in_default>
-      <show_in_website>1</show_in_website>
-      <show_in_store>1</show_in_store>
-      <groups>
-        
-        <!-- BOUNCE X -->
-        <bouncex translate="label" module="conversiontracking">
-          <label>BounceX</label>
-          <frontend_type>text</frontend_type>
-          <sort_order>10</sort_order>
-          <show_in_default>1</show_in_default>
-          <show_in_website>1</show_in_website>
-          <show_in_store>0</show_in_store>
-          <fields>
-            <enabled translate="label">
-              <label>Enable BounceX</label>
-              <frontend_type>select</frontend_type>
-              <source_model>adminhtml/system_config_source_enabledisable</source_model>              
-              <sort_order>1</sort_order>
-              <show_in_default>1</show_in_default>
-              <show_in_website>1</show_in_website>
-              <show_in_store>1</show_in_store>
-            </enabled>
-            <script_file translate="label">
-              <label>Javscript File Soure</label>
-              <frontend_type>text</frontend_type>              
-              <sort_order>10</sort_order>
-              <show_in_default>1</show_in_default>
-              <show_in_website>1</show_in_website>
-              <show_in_store>1</show_in_store>
-            </script_file>
-          </fields>
-        </bouncex>
-        
-        <!-- CRITEO -->
-        <criteo translate="label" module="conversiontracking">
-          <label>Criteo</label>
-          <frontend_type>text</frontend_type>
-          <sort_order>20</sort_order>
-          <show_in_default>1</show_in_default>
-          <show_in_website>0</show_in_website>
-          <show_in_store>0</show_in_store>
-          <fields>
-            <enabled translate="label">
-              <label>Enable Criteo Module</label>
-              <frontend_type>select</frontend_type>
-              <source_model>adminhtml/system_config_source_enabledisable</source_model>
-              <sort_order>10</sort_order>
-              <show_in_default>1</show_in_default>
-              <show_in_website>1</show_in_website>
-              <show_in_store>1</show_in_store>
-            </enabled>
-            <account_id translate="label">
-              <label>Criteo Account ID</label>
-              <frontend_type>text</frontend_type>              
-              <sort_order>20</sort_order>
-              <show_in_default>1</show_in_default>
-              <show_in_website>1</show_in_website>
-              <show_in_store>1</show_in_store>
-            </account_id>
-            <js_url translate="label">
-              <label>Criteo JS File URL</label>
-              <frontend_type>text</frontend_type>              
-              <sort_order>30</sort_order>
-              <show_in_default>1</show_in_default>
-              <show_in_website>1</show_in_website>
-              <show_in_store>1</show_in_store>
-              <comment>Change this field only if you know it is other than default.</comment>
-            </js_url>
-          </fields>
-        </criteo>
-        
-        <!-- GOOGLE REMARKETING -->
-        <google_remarketing translate="label" module="conversiontracking">
-          <label>Google Remarketing</label>
-          <frontend_type>text</frontend_type>
-          <sort_order>100</sort_order>
-          <show_in_default>1</show_in_default>
-          <show_in_website>1</show_in_website>
-          <show_in_store>0</show_in_store>
-          <fields>
-            <enabled translate="label">
-              <label>Enable Google Remarketing Module</label>
-              <frontend_type>select</frontend_type>
-              <source_model>adminhtml/system_config_source_enabledisable</source_model>
-              <sort_order>10</sort_order>
-              <show_in_default>1</show_in_default>
-              <show_in_website>1</show_in_website>
-              <show_in_store>1</show_in_store>
-            </enabled>            
-            <google_conversion_id translate="label">
-              <label>Google Conversion ID</label>
-              <frontend_type>text</frontend_type>
-              <sort_order>20</sort_order>
-              <show_in_default>1</show_in_default>
-              <show_in_website>1</show_in_website>
-              <show_in_store>1</show_in_store>
-            </google_conversion_id>
-            <google_conversion_label translate="label">
-              <label>Google Conversion Label</label>
-              <frontend_type>text</frontend_type>
-              <sort_order>30</sort_order>
-              <show_in_default>1</show_in_default>
-              <show_in_website>1</show_in_website>
-              <show_in_store>1</show_in_store>
-            </google_conversion_label>
-            <google_conversion_color translate="label">
-              <label>Google Conversion Color</label>
-              <frontend_type>text</frontend_type>
-              <sort_order>40</sort_order>
-              <show_in_default>1</show_in_default>
-              <show_in_website>1</show_in_website>
-              <show_in_store>1</show_in_store>
-              <comment>Provide hexadecimal value without starting #</comment>
-            </google_conversion_color>
-            <google_conversion_language translate="label">
-              <label>Google Conversion Language</label>
-              <frontend_type>text</frontend_type>
-              <sort_order>50</sort_order>
-              <show_in_default>1</show_in_default>
-              <show_in_website>1</show_in_website>
-              <show_in_store>1</show_in_store>
-            </google_conversion_language>
-            <google_conversion_format translate="label">
-              <label>Google Conversion Format</label>
-              <frontend_type>text</frontend_type>
-              <sort_order>60</sort_order>
-              <show_in_default>1</show_in_default>
-              <show_in_website>1</show_in_website>
-              <show_in_store>1</show_in_store>
-            </google_conversion_format>
-            <google_remarketing_only translate="label">
-              <label>Remarketing Only Flag</label>
-              <frontend_type>select</frontend_type>
-              <source_model>adminhtml/system_config_source_yesno</source_model>
-              <sort_order>70</sort_order>
-              <show_in_default>1</show_in_default>
-              <show_in_website>1</show_in_website>
-              <show_in_store>1</show_in_store>
-            </google_remarketing_only>            
-          </fields>
-        </google_remarketing>
-        
-        <!-- PRICE GRABBER -->
-        <price_grabber>
-          <label>Price Grabber</label>
-          <frontend_type>text</frontend_type>
-          <sort_order>160</sort_order>
-          <show_in_default>1</show_in_default>
-          <show_in_website>1</show_in_website>
-          <show_in_store>0</show_in_store>
-          <fields>
-            <enabled translate="label">
-              <label>Enable PriceGrabber Module</label>
-              <frontend_type>select</frontend_type>
-              <source_model>adminhtml/system_config_source_enabledisable</source_model>
-              <sort_order>10</sort_order>
-              <show_in_default>1</show_in_default>
-              <show_in_website>1</show_in_website>
-              <show_in_store>1</show_in_store>
-            </enabled>
-            <retid translate="label">
-              <label>Ret ID</label>
-              <frontend_type>text</frontend_type>              
-              <sort_order>20</sort_order>
-              <show_in_default>1</show_in_default>
-              <show_in_website>1</show_in_website>
-              <show_in_store>1</show_in_store>
-            </retid>
-          </fields>
-        </price_grabber>
+    <sections>
+        <conversions translate="label" module="conversiontracking">
+            <tab>sales</tab>
+            <label>Conversion Tracking</label>
+            <frontend_type>text</frontend_type>
+            <sort_order>500</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
 
-        <!-- NEXT TAG -->
-        <nextag translate="label" module="nextag">
-          <label>Nextag Tracker Options</label>
-          <frontend_type>text</frontend_type>
-          <sort_order>170</sort_order>
-          <show_in_default>1</show_in_default>
-          <show_in_website>1</show_in_website>
-          <show_in_store>0</show_in_store>
-          <fields>
-            <enabled translate="label">
-              <label>Enable Tracking</label>
-              <frontend_type>select</frontend_type>
-              <source_model>adminhtml/system_config_source_enabledisable</source_model>
-              <sort_order>10</sort_order>
-              <show_in_default>1</show_in_default>
-              <show_in_website>1</show_in_website>
-              <show_in_store>1</show_in_store>
-            </enabled>
-            <id translate="label">
-              <label>ID</label>
-              <frontend_type>text</frontend_type>
-              <sort_order>20</sort_order>
-              <show_in_default>1</show_in_default>
-              <show_in_website>1</show_in_website>
-              <show_in_store>1</show_in_store>
-            </id>
-          </fields>
-        </nextag>
-      </groups>
-    </conversions>
-  </sections>
+                <!-- BOUNCE X -->
+                <bouncex translate="label" module="conversiontracking">
+                    <label>BounceX</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label" module="conversiontracking">
+                            <label>Enable BounceX</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <script_file translate="label" module="conversiontracking">
+                            <label>Javscript File Soure</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </script_file>
+                    </fields>
+                </bouncex>
+
+                <!-- CRITEO -->
+                <criteo translate="label" module="conversiontracking">
+                    <label>Criteo</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label" module="conversiontracking">
+                            <label>Enable Criteo Module</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <account_id translate="label" module="conversiontracking">
+                            <label>Criteo Account ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </account_id>
+                        <js_url translate="label" module="conversiontracking">
+                            <label>Criteo JS File URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Change this field only if you know it is other than default.</comment>
+                        </js_url>
+                    </fields>
+                </criteo>
+
+                <!-- GOOGLE REMARKETING -->
+                <google_remarketing translate="label" module="conversiontracking">
+                    <label>Google Remarketing</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label" module="conversiontracking">
+                            <label>Enable Google Remarketing Module</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <google_conversion_id translate="label" module="conversiontracking">
+                            <label>Google Conversion ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </google_conversion_id>
+                        <google_conversion_label translate="label" module="conversiontracking">
+                            <label>Google Conversion Label</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </google_conversion_label>
+                        <google_conversion_color translate="label" module="conversiontracking">
+                            <label>Google Conversion Color</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Provide hexadecimal value without starting #</comment>
+                        </google_conversion_color>
+                        <google_conversion_language translate="label" module="conversiontracking">
+                            <label>Google Conversion Language</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </google_conversion_language>
+                        <google_conversion_format translate="label" module="conversiontracking">
+                            <label>Google Conversion Format</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </google_conversion_format>
+                        <google_remarketing_only translate="label" module="conversiontracking">
+                            <label>Remarketing Only Flag</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </google_remarketing_only>
+                    </fields>
+                </google_remarketing>
+
+                <!-- NEXT TAG -->
+                <nextag translate="label" module="conversiontracking">
+                    <label>Nextag Tracker Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>160</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label" module="conversiontracking">
+                            <label>Enable Tracking</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <id translate="label" module="conversiontracking">
+                            <label>ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </id>
+                    </fields>
+                </nextag>
+
+                <!-- PRICE GRABBER -->
+                <price_grabber translate="label" module="conversiontracking">
+                    <label>Price Grabber</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>200</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label" module="conversiontracking">
+                            <label>Enable PriceGrabber Module</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <retid translate="label" module="conversiontracking">
+                            <label>Ret ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </retid>
+                    </fields>
+                </price_grabber>
+
+                <!-- SHOPPING.COM -->
+                <shoppingcom translate="label" module="conversiontracking">
+                    <label>Shopping.com Tracker Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>240</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label" module="conversiontracking">
+                            <label>Enable Tracking</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <merchant_id translate="label" module="conversiontracking">
+                            <label>Merchant ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </merchant_id>
+                    </fields>
+                </shoppingcom>
+
+                <!-- SHOPZILLA -->
+                <shopzilla translate="label" module="conversiontracking">
+                    <label>Shopzilla Tracker Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>280</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label" module="conversiontracking">
+                            <label>Enable Tracking</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <merchant_id translate="label" module="conversiontracking">
+                            <label>Merchant ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </merchant_id>
+                    </fields>
+                </shopzilla>
+
+                <!-- SPARK -->
+                <spark translate="label" module="conversiontracking">
+                    <label>Spart Tracker Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>320</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label" module="conversiontracking">
+                            <label>Enable Tracking</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <api_key translate="label" module="conversiontracking">
+                            <label>API KEY</label>
+                            <frontend_type>obscure</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </api_key>
+                        <test_mode translate="label" module="conversiontracking">
+                            <label>Test mode</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </test_mode>
+                    </fields>
+                </spark>
+            </groups>
+        </conversions>
+    </sections>
 </config>

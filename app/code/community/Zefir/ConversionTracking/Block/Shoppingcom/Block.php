@@ -5,10 +5,13 @@
  * @license http://www.mozilla.org/MPL/2.0/ Mozilla Public License 2.0 (MPL)
  */
 
-class Zefir_ConversionTracking_Block_Nextag_Block extends Zefir_ConversionTracking_Block_Abstract {
+class Zefir_ConversionTracking_Block_Shoppingcom_Block extends Zefir_ConversionTracking_Block_Abstract {
 
-    public function getId() {
-        return $this->_getHelper()->getId();
+    /**
+     * @return string
+     */
+    public function getMerchantId() {
+        return $this->_getHelper()->getMerchantId();
     }
 
     /**
@@ -35,33 +38,31 @@ class Zefir_ConversionTracking_Block_Nextag_Block extends Zefir_ConversionTracki
             $skus[] = $item->getSku();
         }
 
-        return implode('|', $skus);
+        return implode(',', $skus);
     }
 
     /**
-     * Get qty of all products from the order
+     * Get names of all products from the order
      *
      * @param Mage_Sales_Model_Order $order
      * @return string
      */
-    public function getProductQty(Mage_Sales_Model_Order $order) {
-        $qty = array();
-
+    public function getProductNames(Mage_Sales_Model_Order $order) {
+        $names = array();
         foreach($order->getAllItems() as $item) {
-            $qty[] = $item->getQtyOrdered() * 1;
+            $names[] = $item->getName();
         }
 
-        return implode('|', $qty);
+        return implode(',', $names);
     }
-
 
     /**
      * Get helper instance
      *
-     * @return \Zefir_ConversionTracking_Helper_Nextag
+     * @return \Zefir_ConversionTracking_Helper_Shoppingcom
      */
     protected function _getHelper() {
-        return Mage::helper('conversiontracking/nextag');
+        return Mage::helper('conversiontracking/shoppingcom');
     }
 
 }

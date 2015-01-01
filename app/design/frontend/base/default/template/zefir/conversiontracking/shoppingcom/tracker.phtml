@@ -1,0 +1,18 @@
+<?php
+/**
+ * @var Zefir_ConversionTracking_Block_Shoppingcom_Block $this
+ */
+$order = $this->getOrders()->getFirstItem();
+?>
+
+<script language="JavaScript">
+    var merchant_id = '<?php echo $this->getMerchantId(); ?>'
+    var order_id = '<?php echo $order->getIncrementId(); ?>'
+    var order_amt = '<?php echo $this->getOrderAmount($order); ?>'
+    var category_id = ''
+    var category_name = ''
+    var product_id = '<?php echo $this->getProductSkus($order); ?>'
+    var product_name = '<?php echo $this->getProductNames($order); ?>'
+</script>
+<script language="JavaScript"
+        src="https://stat.DealTime.com/ROI/ROI.js?mid='<?php echo $this->getMerchantId() ?>'"></script>

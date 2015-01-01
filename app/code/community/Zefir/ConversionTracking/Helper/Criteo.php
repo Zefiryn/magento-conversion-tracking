@@ -5,7 +5,7 @@
  * @license http://www.mozilla.org/MPL/2.0/ Mozilla Public License 2.0 (MPL)
  */
 
-class Zefir_ConversionTracking_Helper_Criteo extends Mage_Core_Helper_Abstract {
+class Zefir_ConversionTracking_Helper_Criteo extends Zefir_ConversionTracking_Helper_Data {
 
     /**
      * Path to criteo enable configuration

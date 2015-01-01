@@ -1,0 +1,16 @@
+<?php
+/**
+ * @var Zefir_ConversionTracking_Block_Shopzilla_Block $this
+ */
+?>
+<script language="javascript">
+    <!--
+    /* Performance Tracking Data */
+    var mid = '<?php echo $this->getMerchantId();?>';
+    var cust_type = '<?php echo $this->getCustomerType(); ?>';
+    var order_value = '<?php echo $this->getOrderValue()?>';
+    var order_id = '<?php echo $this->getOrderId();?>';
+    var units_ordered = '<?php echo $this->getUnitsOrdered();?>';
+    //-->
+</script>
+<script language="javascript" src="https://www.shopzilla.com/css/roi_tracker.js"></script>

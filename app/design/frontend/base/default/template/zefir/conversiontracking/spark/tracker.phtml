@@ -1,0 +1,19 @@
+<?php
+/**
+ * @var Zefir_ConversionTracking_Block_Spark_Block $this
+ */
+?>
+<!-- Spark Commerce Code: Start-->
+<script src="https://api.sparkcommerce.com/static/js/oncard-publisher.js"></script>
+<script>
+    OnCardPublisher.init({
+        api_key: '<?php echo $this->getApiKey();?>',
+        type: 'lightbox',
+        root_url: 'https://api.sparkcommerce.com',
+        api_version: '0.2',
+        allow_reshow: '<?php echo $this->getTestMode(); ?>', // FOR TESTING ONLY: remove this line when going live
+        ca: '0',
+        data: '<?php echo $this->getOrderJsonData();?>'
+    }).show();
+</script>
+<!-- Spark Commerce Code: End -->
