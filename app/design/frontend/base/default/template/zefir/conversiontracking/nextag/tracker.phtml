@@ -1,0 +1,20 @@
+<?php
+/**
+ * @var Zefir_ConversionTracking_Block_Nextag_Block $this
+ */
+$order = $this->getOrders()->getFirstItem();
+?>
+
+<script type="text/javascript">
+    <!--
+    /* NexTag ROI Optimizer Data */
+    var id = '<?php echo $this->getId(); ?>';
+    var rev = '<?php echo $order->getGrandTotal();?>';
+    var order = '<?php echo $order->getIncrementId();?>';
+    var cats = '';
+    var prods = '<?php echo $this->getProductSkus($order);?>';
+    var units = '<?php echo $this->getProductQty($order);?>';
+    //-->
+</script>
+<script type="text/javascript" src="https://imgsrv.nextag.com/imagefiles/includes/roitrack.js"></script> 
+

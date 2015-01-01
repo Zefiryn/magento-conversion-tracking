@@ -57,6 +57,9 @@
         <conversiontracking_pricegrabber>
           <file>zefir/trackers/pricegrabber.xml</file>
         </conversiontracking_pricegrabber>
+        <conversiontracking_nextag>
+          <file>zefir/trackers/nextag.xml</file>
+        </conversiontracking_nextag>
       </updates>
     </layout>
   </frontend>
