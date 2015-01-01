@@ -120,3 +120,4 @@ skin/frontend/enterprise
 skin/install/
 var/
 .htaccess
+.idea/

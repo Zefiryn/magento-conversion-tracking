@@ -1,14 +1,17 @@
 <?php
 /**
- * @author Zefiryn
- * @package Zefir_ConversionTracking_GoogleRemarketing
+ * @author  Zefiryn
+ * @package Zefir_ConversionTracking
  * @license http://www.mozilla.org/MPL/2.0/ Mozilla Public License 2.0 (MPL)
  */
 
 class Zefir_ConversionTracking_Block_GoogleRemarketing_Search extends Zefir_ConversionTracking_Block_GoogleRemarketing_Abstract {
- 
-  public function getEcommPageType() {
-    return 'search';
-  }
-  
+
+    /**
+     * @return string
+     */
+    public function getEcommPageType() {
+        return 'search';
+    }
+
 }
