@@ -12,10 +12,10 @@ class Zefir_ConversionTracking_Block_Criteo_Category extends Zefir_ConversionTra
      * @return type
      */
     public function getTopProducts() {
-        $layer = Mage::getSingleton('catalog/layer');
+        $collection = Mage::app()->getLayout()->getBlock('product_list')->getLoadedProductCollection();
         $i = 0;
         $list = array();
-        foreach($layer->getProductCollection() as $product) {
+        foreach($collection as $product) {
             $list [] = $product->getSku();
             if($i++ >= 2) {
                 //stop after 3rd element
