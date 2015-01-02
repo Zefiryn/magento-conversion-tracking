@@ -45,27 +45,30 @@
     <frontend>
         <layout>
             <updates>
-                <conversiontracking_googleremarketing>
-                    <file>zefir/trackers/googleremarketing.xml</file>
-                </conversiontracking_googleremarketing>
                 <conversiontracking_bouncex>
                     <file>zefir/trackers/bouncex.xml</file>
                 </conversiontracking_bouncex>
                 <conversiontracking_criteo>
                     <file>zefir/trackers/criteo.xml</file>
                 </conversiontracking_criteo>
-                <conversiontracking_pricegrabber>
-                    <file>zefir/trackers/pricegrabber.xml</file>
-                </conversiontracking_pricegrabber>
+                <conversiontracking_facebook>
+                    <file>zefir/trackers/facebook.xml</file>
+                </conversiontracking_facebook>
+                <conversiontracking_googleremarketing>
+                    <file>zefir/trackers/googleremarketing.xml</file>
+                </conversiontracking_googleremarketing>
                 <conversiontracking_nextag>
                     <file>zefir/trackers/nextag.xml</file>
                 </conversiontracking_nextag>
+                <conversiontracking_pricegrabber>
+                    <file>zefir/trackers/pricegrabber.xml</file>
+                </conversiontracking_pricegrabber>
                 <conversiontracking_shoppingcom>
                     <file>zefir/trackers/shoppingcom.xml</file>
                 </conversiontracking_shoppingcom>
-                <conversiontracking_shoppingcom>
+                <conversiontracking_shopzilla>
                     <file>zefir/trackers/shopzilla.xml</file>
-                </conversiontracking_shoppingcom>
+                </conversiontracking_shopzilla>
                 <conversiontracking_spark>
                     <file>zefir/trackers/spark.xml</file>
                 </conversiontracking_spark>

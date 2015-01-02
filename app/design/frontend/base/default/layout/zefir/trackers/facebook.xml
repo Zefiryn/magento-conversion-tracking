@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <block type="conversiontracking/facebook_block" name="facebook_pixel"
+                   template="zefir/conversiontracking/facebbok/tracker.phtml" />
+        </reference>
+    </default>
+    <checkout_onepage_success>
+        <reference name="head">
+            <block type="conversiontracking/facebook_block" name="facebook_conversion_pixel"
+                   template="zefir/conversiontracking/facebook/conversion.phtml" />
+        </reference>
+    </checkout_onepage_success>
+</layout>

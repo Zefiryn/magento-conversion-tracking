@@ -1,0 +1,34 @@
+<?php
+/**
+ * @var Zefir_ConversionTracking_Block_Facebook_Block $this
+ */
+?>
+<?php if($this->isTrackConversion()): ?>
+    <?php $_order = $this->getOrders()->getFirstItem(); ?>
+
+    <!-- Facebook Conversion Code for Sale -->
+    <script>
+        (function () {
+            var _fbq = window._fbq || (window._fbq = []);
+            if (!_fbq.loaded) {
+                var fbds = document.createElement('script');
+                fbds.async = true;
+                fbds.src = '//connect.facebook.net/en_US/fbds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(fbds, s);
+                _fbq.loaded = true;
+            }
+        })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track',
+            '<?php echo $_order->getIncrementId();?>',
+            {
+                'value': '<?php echo round($_order->getBaseGrandTotal(),2); ?>',
+                'currency': '<?php echo Mage::getStoreConfig(Mage_Directory_Model_Currency::XML_PATH_CURRENCY_BASE);?>'
+            }
+        ]);
+    </script>
+    <noscript><img height="1" width="1" alt="" style="display:none"
+                   src="https://www.facebook.com/tr?ev=<?php echo $_order->getIncrementId(); ?>&cd[value]=<?php echo round($_order->getBaseGrandTotal(), 2); ?>&cd[currency]=<?php echo Mage::getStoreConfig(Mage_Directory_Model_Currency::XML_PATH_CURRENCY_BASE); ?>&noscript=1"/>
+    </noscript>
+<?php endif; ?>
