@@ -1,4 +1,4 @@
 app/code/community/Zefir/*                              app/code/community/Zefir/
-app/design/frontend/base/default/layout/zefir/*         app/design/frontend/base/default/layout/zefir/trackers/
-app/design/frontend/base/default/template/zefir/*       app/design/frontend/base/default/template/zefir/trackers/
-etc/modules/Zefir_ConversionTracking.xml                etc/modules/Zefir_ConversionTracking.xml
+app/design/frontend/base/default/layout/zefir/*         app/design/frontend/base/default/layout/zefir/
+app/design/frontend/base/default/template/zefir/*       app/design/frontend/base/default/template/zefir/
+app/etc/modules/Zefir_ConversionTracking.xml                app/etc/modules/
