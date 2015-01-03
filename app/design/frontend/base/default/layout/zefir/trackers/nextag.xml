@@ -2,7 +2,7 @@
 <layout version="0.1.0">
   <checkout_onepage_success>
     <reference name="before_body_end">
-      <block type="convesiontracking/nextag_block" after="-" name="nextag.tracker" template="zefir/conversiontracking/nextag/tracker.phtml" />
+      <block type="conversiontracking/nextag_block" after="-" name="nextag.tracker" template="zefir/conversiontracking/nextag/tracker.phtml" />
     </reference>
   </checkout_onepage_success>
 </layout>

@@ -12,14 +12,14 @@ class Zefir_ConversionTracking_Block_Facebook_Block extends Zefir_ConversionTrac
      * @return string
      */
     public function isTrackConversion() {
-        return $this->_getHelper()->isTrackConversion();
+        return $this->_helper()->isTrackConversion();
     }
 
     /**
      * @return string
      */
     public function getPixelId() {
-        return $this->_getHelper()->getPixelId();
+        return $this->_helper()->getPixelId();
     }
 
     /**
@@ -27,7 +27,7 @@ class Zefir_ConversionTracking_Block_Facebook_Block extends Zefir_ConversionTrac
      *
      * @return \Zefir_ConversionTracking_Helper_Shoppingcom
      */
-    protected function _getHelper() {
+    protected function _helper() {
         return Mage::helper('conversiontracking/facebook');
     }
 }

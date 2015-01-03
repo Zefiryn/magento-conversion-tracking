@@ -25,7 +25,7 @@ class Zefir_ConversionTracking_Helper_Facebook extends Zefir_ConversionTracking_
      * @return boolean
      */
     public function isEnabled() {
-        return Mage::getStoreConfig(self::XPATH_ENABLE);
+        return Mage::getStoreConfig(self::XPATH_ENABLED);
     }
 
     /**
