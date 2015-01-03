@@ -32,6 +32,7 @@ class Zefir_ConversionTracking_Block_Abstract extends Mage_Core_Block_Template {
      * @return string
      */
     protected function _toHtml() {
+        Mage::log(get_class($this).'::'.get_class($this->_helper()));
         if(!$this->_helper()->isEnabled()) {
             return '';
         }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout version="0.1.0">
+    <checkout_onepage_success>
+        <reference name="before_body_end">
+            <block type="conversiontracking/amazon_block" name="amazon_pixel"
+                   template="zefir/conversiontracking/amazon/tracker.phtml" />
+        </reference>
+    </checkout_onepage_success>
+</layout>

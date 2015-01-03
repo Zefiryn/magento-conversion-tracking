@@ -45,6 +45,9 @@
     <frontend>
         <layout>
             <updates>
+                <conversiontracking_amazon>
+                    <file>zefir/trackers/amazon.xml</file>
+                </conversiontracking_amazon>
                 <conversiontracking_bouncex>
                     <file>zefir/trackers/bouncex.xml</file>
                 </conversiontracking_bouncex>

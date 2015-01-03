@@ -1,0 +1,22 @@
+<?php $_order = $this->getOrders()->getFirstItem(); ?>
+<!-- Use of this pixel is subject to the Amazon ad specs and policies at https://sellercentral.amazon.com/gp/help/201622840 -->
+<script type="text/javascript">
+    var _paPixel = _paPixel || [];
+    _paPixel.push(['merchantId', '<?php echo $this->helper('conversiontracking/amazon')->getMerchantId(); ?>']);
+    _paPixel.push(['type', 'purchase']);
+    _paPixel.push(['uniqueEventId', '<?php echo $_order->getIncrementId(); ?>']);
+
+    <?php foreach($_order->getAllItems() as $_item):?>
+    _paPixel.push(['items', '<?php echo $_item->getSku();?>', <?php echo $_item->getQtyOrdered() * 1; ?>, <?php echo $_item->getPrice();?>, 'USD']);
+    <?php endforeach; ?>
+
+    _paPixel.push(['submit']);
+    (function () {
+        var paPixel = document.createElement('script');
+        paPixel.type = 'text/javascript';
+        paPixel.async = true;
+        paPixel.src = '//d10so77biaxg0k.cloudfront.net/pa_pixel.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(paPixel, s);
+    })();
+</script>
