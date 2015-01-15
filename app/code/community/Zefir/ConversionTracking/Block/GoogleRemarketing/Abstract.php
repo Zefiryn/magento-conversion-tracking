@@ -157,15 +157,15 @@ class Zefir_ConversionTracking_Block_GoogleRemarketing_Abstract extends Zefir_Co
      */
     protected function _getGoogleTagParams() {
 
-        if (array_key_exists('ecomm_prodid', $params) || $this->getEcommProdId()) {
-            $params['ecomm_prodid'] = isset($params['ecomm_prodid']) ? $params['ecomm_prodid'] : $this->getEcommProdId();
+        if ($this->getEcommProdId()) {
+            $params['ecomm_prodid'] = $this->getEcommProdId();
         }
-        if (array_key_exists('ecomm_totalvalue', $params) || $this->getEcommTotalValue()) {
-            $params['ecomm_totalvalue'] = isset($params['ecomm_totalvalue']) ? $params['ecomm_totalvalue'] : $this->getEcommTotalValue();
+        if ($this->getEcommTotalValue()) {
+            $params['ecomm_totalvalue'] = $this->getEcommTotalValue();
         }
 
-        $params['ecomm_pagetype'] = isset($params['ecomm_pagetype']) ? $params['ecomm_pagetype'] : $this->getEcommPageType();
-        $params['returnCustomer'] = isset($params['returnCustomer']) ? $params['returnCustomer'] : $this->getReturnCustomer();
+        $params['ecomm_pagetype'] = $this->getEcommPageType();
+        $params['returnCustomer'] = $this->getReturnCustomer();
 
         if($this->getGender()) {
             $params['g'] = $this->getGender();
