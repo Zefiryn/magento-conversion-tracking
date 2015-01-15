@@ -24,9 +24,9 @@ class Zefir_ConversionTracking_Block_GoogleRemarketing_Category extends Zefir_Co
     /**
      * @return mixed
      */
-    protected function _getGoogleParams() {
+    protected function _getGoogleTagParams() {
 
-        $params = parent::_getGoogleParams();
+        $params = parent::_getGoogleTagParams();
         $params['ecomm_category'] = $this->getEcommCategory();
 
         return $params;

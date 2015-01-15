@@ -1,18 +1,14 @@
+<?php
+/**
+ * @var Zefir_ConversionTracking_Block_GoogleRemarketing_Abstract $this
+ */
+?>
 <!-- Google Code for Remarketing Tag -->
 <!--Remarketing tags may not be associated with personally identifiable informationor placed on pages related to sensitive categories. See more information andinstructions on how to setup the tag on: http://google.com/ads/remarketingsetup-->
 <script type="text/javascript">  
  //<![CDATA[
-  var google_tag_params = {        
-    <?php if ($this->getEcommPValue()):?>ecomm_pvalue: <?php echo json_encode($this->getEcommPValue())?>,<?php endif;?>      
-    <?php if ($this->getEcommQuantity()):?>ecomm_quantity: <?php echo json_encode($this->getEcommQuantity())?>,<?php endif;?>
-    <?php if ($this->getEcommCategory()):?>ecomm_category: '<?php echo $this->getEcommCategory();?>',<?php endif;?>  
-    <?php if ($this->getGender()):?>g: '<?php echo $this->getGender();?>',<?php endif;?>
-    <?php if ($this->getAge()):?>a: '<?php echo $this->getAge();?>',<?php endif;?>
-    ecomm_prodid: <?php if ($this->getEcommProdId()):?><?php echo json_encode($this->getEcommProdId())?><?php else:?>''<?php endif;?>,
-    ecomm_pagetype: '<?php echo $this->getEcommPageType();?>',
-    ecomm_totalValue: <?php echo $this->getEcommTotalValue() != null ? $this->getEcommTotalValue() : "''";?>,
-    hasaccount: '<?php echo $this->getHasAccount();?>'
-  };  
+  var google_tag_params = <?php echo json_encode($this->getGoogleTagParams());?>;
+
 //]]> 
 </script>
 <script type="text/javascript">

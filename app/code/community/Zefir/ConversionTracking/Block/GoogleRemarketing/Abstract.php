@@ -85,8 +85,8 @@ class Zefir_ConversionTracking_Block_GoogleRemarketing_Abstract extends Zefir_Co
     /**
      * @return string
      */
-    public function getHasAccount() {
-        return Mage::getSingleton('customer/session')->getId() != null ? 'y' : 'n';
+    public function getReturnCustomer() {
+        return Mage::getSingleton('customer/session')->getId() != null ? 'true' : 'false';
     }
 
     /**
@@ -157,10 +157,15 @@ class Zefir_ConversionTracking_Block_GoogleRemarketing_Abstract extends Zefir_Co
      */
     protected function _getGoogleTagParams() {
 
-        $params['ecomm_prodid'] = isset($params['ecomm_prodid']) ? $params['ecomm_prodid'] : $this->getEcommProdId();
+        if (array_key_exists('ecomm_prodid', $params) || $this->getEcommProdId()) {
+            $params['ecomm_prodid'] = isset($params['ecomm_prodid']) ? $params['ecomm_prodid'] : $this->getEcommProdId();
+        }
+        if (array_key_exists('ecomm_totalvalue', $params) || $this->getEcommTotalValue()) {
+            $params['ecomm_totalvalue'] = isset($params['ecomm_totalvalue']) ? $params['ecomm_totalvalue'] : $this->getEcommTotalValue();
+        }
+
         $params['ecomm_pagetype'] = isset($params['ecomm_pagetype']) ? $params['ecomm_pagetype'] : $this->getEcommPageType();
-        $params['ecomm_totalvalue'] = isset($params['ecomm_totalvalue']) ? $params['ecomm_totalvalue'] : $this->getEcommTotalValue();
-        $params['hasaccount'] = isset($params['hasaccount']) ? $params['hasaccount'] : $this->getHasAccount();
+        $params['returnCustomer'] = isset($params['returnCustomer']) ? $params['returnCustomer'] : $this->getReturnCustomer();
 
         if($this->getGender()) {
             $params['g'] = $this->getGender();

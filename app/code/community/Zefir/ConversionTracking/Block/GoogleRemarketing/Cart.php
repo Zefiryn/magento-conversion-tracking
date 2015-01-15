@@ -67,9 +67,9 @@ class Zefir_ConversionTracking_Block_GoogleRemarketing_Cart extends Zefir_Conver
     /**
      * @return array
      */
-    protected function _getGoogleParams() {
+    protected function _getGoogleTagParams() {
 
-        $params = parent::_getGoogleParams();
+        $params = parent::_getGoogleTagParams();
         $params['ecomm_pvalue'] = $this->getEcommPValue();
         $params['ecomm_quantity'] = $this->getEcommQuantity();
 
